@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Xml.Linq;
+using System.Xml.Resolvers;
+
+namespace my_first_app
+{
+
+
+    public class Program
+    {
+        static void Main()
+        {
+
+            var name = "Javlonbek";
+            Console.WriteLine(Reverse(name));
+            
+        }
+        static string Reverse(string str)
+        {
+            var container = new char[str.Length];
+
+            for (var i = str.Length; i > 0; i--)
+            {
+                container[str.Length - i] = str[i - 1];
+            }
+            var reversed = new string(container);
+
+            return reversed;
+        }
+    }
+}
